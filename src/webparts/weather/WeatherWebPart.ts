@@ -39,15 +39,15 @@ export default class WeatherWebPart extends BaseClientSideWebPart<IWeatherWebPar
     ($ as any).simpleWeather({
       location: location,
       woeid: '',
-      unit: 'c',
+      unit: 'f',
       success: (weather: any): void => {
         const html: string =
           `<h2><i class="icon${weather.code}"></i> ${weather.temp}&deg;${weather.units.temp}</h2>
-           <ul><li>${weather.city} ${weather.region}</li></ul>`;
+           <ul><li>${weather.city} ${weather.region}</li><li>${weather.currently}</li></ul>`;
         webPart.container.html(html)
           .removeAttr('style')
           .css('background',
-            `url('http://loremflickr.com/500/139/${location}')`);
+            `url('http://loremflickr.com/500/139/construction,${location}?random=${location}')`);
       },
       error: (error: any): void => {
         webPart.container.html(`<p>${error.message}</p>`).removeAttr('style');
