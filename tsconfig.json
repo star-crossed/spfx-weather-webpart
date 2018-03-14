@@ -6,9 +6,15 @@
     "jsx": "react",
     "declaration": true,
     "sourceMap": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "es5",
+      "scripthost",
+      "es2015.collection"
+    ],
     "types": [
       "es6-promise",
-      "es6-collections",
       "webpack-env"
     ]
   }

@@ -1,11 +1,19 @@
 {
-  "entries": [
-    {
-      "entry": "./lib/webparts/weather/WeatherWebPart.js",
-      "manifest": "./src/webparts/weather/WeatherWebPart.manifest.json",
-      "outputPath": "./dist/weather.bundle.js"
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "weather-bundle": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/weather/WeatherWebPart.js",
+          "manifest": "./src/webparts/weather/WeatherWebPart.manifest.json"
+        }
+      ]
     }
-  ],
+  },
+  "localizedResources": {
+    "weatherStrings": "lib/webparts/weather/loc/{locale}.js"
+  },
   "externals": {
     "jquery": {
       "path": "https://code.jquery.com/jquery-2.1.1.min.js",
@@ -14,10 +22,9 @@
     "simpleWeather": {
       "path": "https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js",
       "globalName": "jQuery",
-      "globalDependencies": [ "jquery" ]
+      "globalDependencies": [
+        "jquery"
+      ]
     }
-  },
-  "localizedResources": {
-    "weatherStrings": "webparts/weather/loc/{locale}.js"
   }
 }
