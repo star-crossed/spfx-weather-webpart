@@ -10,18 +10,18 @@
 }
 
 .weather {
-  width: 500px;
+  width: 150px;
     margin: 0px auto;
     text-align: center;
     text-transform: uppercase;
 
     i {
-        color: #fff;
+        color: #002e62;
         font-family: weather;
-        font-size: 100px;
+        font-size: 40px;
         font-weight: normal;
         font-style: normal;
-        line-height: 1.0;
+        line-height: .5;
         text-transform: initial;
 
         &[class=icon0]:before { content: ":"; }
@@ -76,8 +76,8 @@
 
     h2 {
         margin: -10px 0 0 0;
-        color: #fff;
-        font-size: 75px;
+        color: #002e62;
+        font-size: 30px;
         font-weight: 300;
         text-align: center;
         text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
@@ -87,14 +87,11 @@
         padding: 0;
     }
     li {
-        background: #fff;
-        background: rgba(255,255,255,0.90);
         padding: 10px;
-        margin-top:-25px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-top:-15px;
         display: inline-block;
         border-radius: 5px;
+        font-size: 12px;
     }
     .currently {
         margin: 0 20px;
